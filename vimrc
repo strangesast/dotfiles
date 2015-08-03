@@ -26,6 +26,8 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'tpope/vim-fugitive'
 Bundle 'int3/vim-extradite'
 Bundle 'digitaltoad/vim-jade'
+Bundle 'groenewege/vim-less'
+Bundle 'suan/vim-instant-markdown'
 
 call vundle#end()
 filetype plugin indent on
@@ -69,7 +71,7 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_open_new_file = 't'
 
-let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules)$'
+let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules|components)$'
 """""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""
