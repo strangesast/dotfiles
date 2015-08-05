@@ -28,6 +28,7 @@ Bundle 'int3/vim-extradite'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'groenewege/vim-less'
 Bundle 'suan/vim-instant-markdown'
+Bundle 'rking/ag.vim'
 
 call vundle#end()
 filetype plugin indent on
