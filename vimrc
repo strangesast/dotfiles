@@ -13,26 +13,27 @@ Plugin 'bling/vim-airline'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
 Plugin 'altercation/vim-colors-solarized'
-Bundle 'christoomey/vim-tmux-navigator'
+"Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'kien/ctrlp.vim'
-Bundle 'Shougo/unite.vim'
-Bundle 'majutsushi/tagbar'
+"Bundle 'Shougo/unite.vim'
+"Bundle 'majutsushi/tagbar'
 Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdtree'
+"Bundle 'scrooloose/nerdtree'
 Bundle 'godlygeek/tabular'
-Bundle 'plasticboy/vim-markdown'
+"Bundle 'plasticboy/vim-markdown'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'tpope/vim-fugitive'
-Bundle 'int3/vim-extradite'
+"Bundle 'tpope/vim-fugitive'
+"Bundle 'int3/vim-extradite'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'groenewege/vim-less'
-Bundle 'suan/vim-instant-markdown'
+"Bundle 'suan/vim-instant-markdown'
 Bundle 'rking/ag.vim'
 
 call vundle#end()
 filetype plugin indent on
 """""""""""""""""""""""""""""""""""""""""""
+set encoding=utf-8
 
 
 """""""""""""""""""""""""""""""""""""""""""
@@ -59,7 +60,7 @@ set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline_enable_branch = 1
 "let g:airline_enable_syntastic = 1
-let g:airline_section_b = '%{strftime("%c")}'
+"let g:airline_section_b = '%{strftime("%c")}'
 let g:airline#extensions#tabline#enabled = 1
 
 
@@ -77,23 +78,23 @@ let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules|components)$'
 
 """""""""""""""""""""""""""""""""""""""""""
 " Unite
-let g:unite_source_history_yank_enable = 1
-call unite#filters#matcher_default#use(['matcher_fuzzy'])
-nnoremap <leader>t :<C-u>Unite -no-split -buffer-name=files   -start-insert file_rec/async:!<cr>
-nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files   -start-insert file<cr>
-nnoremap <leader>r :<C-u>Unite -no-split -buffer-name=mru     -start-insert file_mru<cr>
-nnoremap <leader>o :<C-u>Unite -no-split -buffer-name=outline -start-insert outline<cr>
-nnoremap <leader>y :<C-u>Unite -no-split -buffer-name=yank    history/yank<cr>
-nnoremap <leader>e :<C-u>Unite -no-split -buffer-name=buffer  buffer<cr>
-" Custom mappings for the unite buffer
-autocmd FileType unite call s:unite_settings()
-function! s:unite_settings()
-    " Play nice with supertab
-    let b:SuperTabDisabled=1
-    " Enable navigation with control-j and control-k in insert mode
-    imap <buffer> <C-j>   <Plug>(unite_select_next_line)
-    imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
-endfunction
+"let g:unite_source_history_yank_enable = 1
+"call unite#filters#matcher_default#use(['matcher_fuzzy'])
+"nnoremap <leader>t :<C-u>Unite -no-split -buffer-name=files   -start-insert file_rec/async:!<cr>
+"nnoremap <leader>f :<C-u>Unite -no-split -buffer-name=files   -start-insert file<cr>
+"nnoremap <leader>r :<C-u>Unite -no-split -buffer-name=mru     -start-insert file_mru<cr>
+"nnoremap <leader>o :<C-u>Unite -no-split -buffer-name=outline -start-insert outline<cr>
+"nnoremap <leader>y :<C-u>Unite -no-split -buffer-name=yank    history/yank<cr>
+"nnoremap <leader>e :<C-u>Unite -no-split -buffer-name=buffer  buffer<cr>
+"" Custom mappings for the unite buffer
+"autocmd FileType unite call s:unite_settings()
+"function! s:unite_settings()
+"    " Play nice with supertab
+"    let b:SuperTabDisabled=1
+"    " Enable navigation with control-j and control-k in insert mode
+"    imap <buffer> <C-j>   <Plug>(unite_select_next_line)
+"    imap <buffer> <C-k>   <Plug>(unite_select_previous_line)
+"endfunction
 """""""""""""""""""""""""""""""""""""""""""
 
 
@@ -124,6 +125,7 @@ set ruler
 set autoread
 set ignorecase
 set smartcase
+set exrc
 
 " Tabstop, Shiftwidth
 set ts=2
