@@ -123,3 +123,7 @@ eval "$(rbenv init -)"
 export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
 export EDITOR=vim
+export WIRELESS_STATUS_PORT=8081
+export SCOREBOARD_EMULATOR_IP="192.168.1.127"
+export ARDMK_DIR=/usr/share/arduino
+stty -ixon

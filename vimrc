@@ -40,7 +40,7 @@ filetype plugin indent on
 syntax enable
 syntax on
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 """""""""""""""""""""""""""""""""""""""""""
 
 
@@ -124,6 +124,7 @@ set ruler
 set autoread
 set ignorecase
 set smartcase
+set exrc
 
 " Tabstop, Shiftwidth
 set ts=2
