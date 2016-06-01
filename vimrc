@@ -4,13 +4,14 @@ set t_Co=256
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim/
+set rtp+=~/.vim/bundle/vundle/
 call vundle#begin()
 
 Plugin 'gmarik/vundle'
 Plugin 'bling/vim-airline'
 "Plugin 'Lokaltog/powerline'
-Plugin 'davidhalter/jedi-vim'
+"Plugin 'davidhalter/jedi-vim'
+Bundle 'Valloric/YouCompleteMe'
 Plugin 'ervandew/supertab'
 Plugin 'altercation/vim-colors-solarized'
 "Bundle 'christoomey/vim-tmux-navigator'
@@ -125,7 +126,7 @@ set ruler
 set autoread
 set ignorecase
 set smartcase
-set exrc
+set exrc "load local vimrc
 
 " Tabstop, Shiftwidth
 set ts=2
