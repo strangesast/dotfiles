@@ -7,29 +7,58 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#begin()
 
-Plugin 'gmarik/vundle'
-Plugin 'bling/vim-airline'
-"Plugin 'Lokaltog/powerline'
-"Plugin 'davidhalter/jedi-vim'
-Bundle 'Valloric/YouCompleteMe'
-Plugin 'ervandew/supertab'
-Plugin 'altercation/vim-colors-solarized'
-"Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'gmarik/vundle'
+" General stuff
+" duh
+Bundle 'bling/vim-airline'
+
+" ctrl-p!
 Bundle 'kien/ctrlp.vim'
-"Bundle 'Shougo/unite.vim'
-"Bundle 'majutsushi/tagbar'
-Bundle 'scrooloose/syntastic'
-"Bundle 'scrooloose/nerdtree'
+
+"not skilled enough for this
+"Bundle 'Shougo/unite.vim' 
+
+" silversearcher-ag
+Bundle 'rking/ag.vim'
+
+"autocompletion, needs to be compiled as well
+Bundle 'Valloric/YouCompleteMe'
+
+"tab completion
+Bundle 'ervandew/supertab'
+
+"generally not needed
+Bundle 'altercation/vim-colors-solarized'
+
+" tags on the right, requires 'exuberant-ctags' package
+Bundle 'majutsushi/tagbar'
+
+" somewhat duplicates ycm
+"Bundle 'scrooloose/syntastic'
+
+"File tree browser
+Bundle 'scrooloose/nerdtree'
+
+"sweet but pro
 Bundle 'godlygeek/tabular'
-"Bundle 'plasticboy/vim-markdown'
+
+" Markdown
+Bundle 'plasticboy/vim-markdown'
+
+" Javascript / Web stuff
 Bundle 'kchmck/vim-coffee-script'
-Bundle 'vim-ruby/vim-ruby'
-"Bundle 'tpope/vim-fugitive'
-"Bundle 'int3/vim-extradite'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'groenewege/vim-less'
-"Bundle 'suan/vim-instant-markdown'
-Bundle 'rking/ag.vim'
+
+" Git stuff
+Bundle 'tpope/vim-fugitive'
+Bundle 'suan/vim-instant-markdown'
+
+" Ruby stuff
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-haml'
+
 
 call vundle#end()
 filetype plugin indent on
