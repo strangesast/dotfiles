@@ -4,7 +4,7 @@ set t_Co=256
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#begin()
 
 Bundle 'gmarik/vundle'
@@ -43,12 +43,18 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'godlygeek/tabular'
 
 " Markdown
-Bundle 'plasticboy/vim-markdown'
+"Bundle 'plasticboy/vim-markdown'
 
 " Javascript / Web stuff
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'digitaltoad/vim-jade'
 Bundle 'groenewege/vim-less'
+
+" Typescript
+Bundle 'leafgarland/typescript-vim'
+Bundle 'Shougo/vimproc.vim'
+Bundle 'Quramy/tsuquyomi'
+
 
 " Git stuff
 Bundle 'tpope/vim-fugitive'
