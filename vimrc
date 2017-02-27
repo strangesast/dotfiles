@@ -109,7 +109,7 @@ let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_open_new_file = 't'
 
-let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules|components)$'
+let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules|bower_components)$'
 """""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""
