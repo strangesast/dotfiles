@@ -9,13 +9,14 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'Valloric/YouCompleteMe'
 
-"Plugin 'powerline/powerline'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'altercation/vim-colors-solarized'
 
 Plugin 'ctrlpvim/ctrlp.vim'
+
+Plugin 'scrooloose/nerdtree'
 
 Plugin 'rking/ag.vim'
 
@@ -53,6 +54,9 @@ let g:airline_theme='solarized'
 syntax enable
 set background=dark
 colorscheme solarized
+
+" NerdTree
+map <C-n> :NERDTreeToggle<CR>
 
 " General
 nnoremap <C-J> <C-W><C-J>
