@@ -26,6 +26,7 @@ Plugin 'ternjs/tern_for_vim'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Quramy/tsuquyomi'
+Plugin 'HerringtonDarkholme/yats.vim'
 
 call vundle#end()
 filetype plugin indent on
