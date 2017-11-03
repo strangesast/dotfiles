@@ -7,7 +7,10 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'altercation/vim-colors-solarized'
+
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 
@@ -17,6 +20,8 @@ Plugin 'scrooloose/nerdtree'
 
 Plugin 'rking/ag.vim'
 
+Plugin 'christoomey/vim-tmux-navigator'
+
 " Javascript / Typescript / C / Go / Python / Rust
 Plugin 'Valloric/YouCompleteMe'
 
@@ -25,6 +30,7 @@ Plugin 'artur-shaik/vim-javacomplete2'
 
 " Javascript
 Plugin 'ternjs/tern_for_vim'
+Plugin 'pangloss/vim-javascript'
 
 " Typescript
 Plugin 'leafgarland/typescript-vim'
@@ -34,7 +40,11 @@ Plugin 'HerringtonDarkholme/yats.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
-syntax on
+syntax enable
+
+" colorscheme
+set background=dark
+colorscheme solarized
 
 " ctrlp
 let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules|bower_components)$'
@@ -42,6 +52,7 @@ let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules|bower_components)$'
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
+let g:airline_theme='solarized'
 let g:airline_powerline_fonts = 1
 
 " vim-javacomplete2
