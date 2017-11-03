@@ -31,6 +31,7 @@ Plugin 'artur-shaik/vim-javacomplete2'
 " Javascript
 Plugin 'ternjs/tern_for_vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'othree/yajs.vim'
 
 " Typescript
 Plugin 'leafgarland/typescript-vim'
@@ -47,7 +48,17 @@ set background=dark
 colorscheme solarized
 
 " ctrlp
-let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules|bower_components)$'
+"let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules|bower_components)$'
+if executable('ag')
+  " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+  set grepprg=ag\ --nogroup\ --nocolor
+  " Use ag in CtrlP for listing files. Lightning fast, respects .gitignore
+  " and .agignore. Ignores hidden files by default.
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -f -g ""'
+else
+  "ctrl+p ignore files in .gitignore
+  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+endif
 
 " vim-airline
 let g:airline#extensions#tabline#enabled = 1
@@ -60,6 +71,9 @@ autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
+
+" javascript
+autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
 
 " general
 set number
