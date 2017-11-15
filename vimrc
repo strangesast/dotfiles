@@ -22,6 +22,8 @@ Plugin 'rking/ag.vim'
 
 Plugin 'christoomey/vim-tmux-navigator'
 
+Plugin 'jszakmeister/vim-togglecursor'
+
 " Javascript / Typescript / C / Go / Python / Rust
 Plugin 'Valloric/YouCompleteMe'
 
