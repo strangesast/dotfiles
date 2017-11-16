@@ -9,8 +9,9 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'altercation/vim-colors-solarized'
 
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'vim-airline/vim-airline'
+"Plugin 'vim-airline/vim-airline-themes'
+Plugin 'powerline/powerline'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 
@@ -62,11 +63,14 @@ else
   let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 endif
 
-" vim-airline
-let g:airline#extensions#tabline#enabled = 1
+" statusbar
 set laststatus=2
-let g:airline_theme='solarized'
-let g:airline_powerline_fonts = 1
+" vim-airline
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline_theme='solarized'
+"let g:airline_powerline_fonts = 1
+" powerline
+set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
 
 " vim-javacomplete2
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
