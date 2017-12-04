@@ -1,6 +1,6 @@
 set encoding=utf8
-set nocompatible              " be iMproved, required
-filetype off                  " required
+set nocompatible
+filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -26,6 +26,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'jszakmeister/vim-togglecursor'
 
 " Javascript / Typescript / C / Go / Python / Rust
+Plugin 'w0rp/ale'
 Plugin 'Valloric/YouCompleteMe'
 
 " Java
