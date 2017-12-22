@@ -43,6 +43,9 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'Quramy/tsuquyomi'
 Plugin 'HerringtonDarkholme/yats.vim'
 
+" Python
+Plugin 'davidhalter/jedi-vim'
+
 " Go
 Plugin 'fatih/vim-go'
 
