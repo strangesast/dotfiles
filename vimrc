@@ -25,6 +25,10 @@ Plugin 'christoomey/vim-tmux-navigator'
 
 Plugin 'jszakmeister/vim-togglecursor'
 
+Plugin 'tpope/vim-fugitive'
+
+Plugin 'mattn/emmet-vim'
+
 " Javascript / Typescript / C / Go / Python / Rust
 Plugin 'w0rp/ale'
 Plugin 'Valloric/YouCompleteMe'
@@ -36,6 +40,10 @@ Plugin 'artur-shaik/vim-javacomplete2'
 Plugin 'ternjs/tern_for_vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/yajs.vim'
+
+" Html
+" htmlhint (npm install -g htmlhint)
+Plugin 'othree/html5.vim'
 
 " Typescript
 Plugin 'leafgarland/typescript-vim'
@@ -70,6 +78,16 @@ else
   let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
 endif
 
+" general
+set number
+set ignorecase
+set so=20
+set smartcase
+set expandtab
+set exrc
+set shiftwidth=4
+set tabstop=4
+
 " statusbar
 set laststatus=2
 " vim-airline
@@ -79,24 +97,17 @@ set laststatus=2
 " powerline
 set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
 
-" vim-javacomplete2
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
-
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
+" go
+autocmd Filetype go setlocal expandtab!
+
+" java
+autocmd FileType java setlocal omnifunc=javacomplete#Complete ts=2 sts=2 sw=2
+
 " javascript
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
-
-" general
-set number
-set ignorecase
-set so=30
-set smartcase
-set expandtab
-set exrc
-set shiftwidth=4
-set tabstop=4
 
 " better window behavior
 nnoremap <C-J> <C-W><C-J>
