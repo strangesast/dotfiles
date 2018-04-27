@@ -36,6 +36,9 @@ Plugin 'Valloric/YouCompleteMe'
 " Java
 Plugin 'artur-shaik/vim-javacomplete2'
 
+" Kotlin
+Plugin 'udalov/kotlin-vim'
+
 " Javascript
 Plugin 'ternjs/tern_for_vim'
 Plugin 'pangloss/vim-javascript'
@@ -48,7 +51,7 @@ Plugin 'othree/html5.vim'
 " Typescript
 Plugin 'leafgarland/typescript-vim'
 Plugin 'Shougo/vimproc.vim'
-Plugin 'Quramy/tsuquyomi'
+"Plugin 'Quramy/tsuquyomi'
 Plugin 'HerringtonDarkholme/yats.vim'
 
 " Python
@@ -67,6 +70,7 @@ colorscheme solarized
 
 " ctrlp
 "let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules|bower_components)$'
+let g:ctrlp_working_path_mode = 0
 if executable('ag')
   " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
   set grepprg=ag\ --nogroup\ --nocolor
@@ -79,14 +83,15 @@ else
 endif
 
 " general
+set noswapfile
 set number
 set ignorecase
 set so=20
 set smartcase
 set expandtab
 set exrc
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 
 " statusbar
 set laststatus=2
@@ -105,9 +110,15 @@ autocmd Filetype go setlocal expandtab!
 
 " java
 autocmd FileType java setlocal omnifunc=javacomplete#Complete ts=2 sts=2 sw=2
+let g:JavaComplete_ImportDefault = -1
+let g:JavaComplete_ImportOrder = ['java.', 'javax.', 'com.', 'org.', 'net.']
+let g:JavaComplete_ImportSortType = 'packageName'
 
 " javascript
 autocmd Filetype javascript setlocal ts=2 sts=2 sw=2
+
+" python
+autocmd Filetype python setlocal ts=4 sts=4 sw=4
 
 " better window behavior
 nnoremap <C-J> <C-W><C-J>
