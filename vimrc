@@ -9,23 +9,23 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'altercation/vim-colors-solarized'
 
-"Plugin 'vim-airline/vim-airline'
-"Plugin 'vim-airline/vim-airline-themes'
-Plugin 'powerline/powerline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+"Plugin 'powerline/powerline'
 
 Plugin 'ctrlpvim/ctrlp.vim'
 
-Plugin 'majutsushi/tagbar'
+"Plugin 'majutsushi/tagbar'
 
 Plugin 'scrooloose/nerdtree'
 
 Plugin 'rking/ag.vim'
 
-Plugin 'christoomey/vim-tmux-navigator'
+"Plugin 'christoomey/vim-tmux-navigator'
 
-Plugin 'jszakmeister/vim-togglecursor'
+"Plugin 'jszakmeister/vim-togglecursor'
 
-Plugin 'tpope/vim-fugitive'
+"Plugin 'tpope/vim-fugitive'
 
 Plugin 'mattn/emmet-vim'
 
@@ -34,10 +34,10 @@ Plugin 'w0rp/ale'
 Plugin 'Valloric/YouCompleteMe'
 
 " Java
-Plugin 'artur-shaik/vim-javacomplete2'
+"Plugin 'artur-shaik/vim-javacomplete2'
 
 " Kotlin
-Plugin 'udalov/kotlin-vim'
+"Plugin 'udalov/kotlin-vim'
 
 " Javascript
 Plugin 'ternjs/tern_for_vim'
@@ -55,10 +55,10 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'HerringtonDarkholme/yats.vim'
 
 " Python
-Plugin 'davidhalter/jedi-vim'
+"Plugin 'davidhalter/jedi-vim'
 
 " Go
-Plugin 'fatih/vim-go'
+"Plugin 'fatih/vim-go'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -97,10 +97,10 @@ set tabstop=2
 set laststatus=2
 " vim-airline
 "let g:airline#extensions#tabline#enabled = 1
-"let g:airline_theme='solarized'
-"let g:airline_powerline_fonts = 1
+let g:airline_theme='solarized'
+let g:airline_powerline_fonts = 1
 " powerline
-set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+"set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
 
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
