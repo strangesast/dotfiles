@@ -55,17 +55,17 @@ Plugin 'Shougo/vimproc.vim'
 Plugin 'HerringtonDarkholme/yats.vim'
 
 " Python
-"Plugin 'davidhalter/jedi-vim'
+"Plugin 'davidhalter/jedi-vim' "youcompleteme uses jedi, so this is redundant
 
 " Go
-"Plugin 'fatih/vim-go'
+Plugin 'fatih/vim-go'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 syntax enable
 
 " colorscheme
-set background=dark
+"set background=dark
 colorscheme solarized
 
 " ctrlp
