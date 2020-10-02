@@ -35,12 +35,17 @@ Plugin 'iamcco/markdown-preview.nvim'
 " Javascript / Typescript / C / Go / Python / Rust
 Plugin 'w0rp/ale'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'neoclide/coc.nvim'
 
 " Java
-"Plugin 'artur-shaik/vim-javacomplete2'
+Plugin 'artur-shaik/vim-javacomplete2'
 
 " Kotlin
-"Plugin 'udalov/kotlin-vim'
+Plugin 'udalov/kotlin-vim'
+
+" Rust
+Plugin 'rust-lang/rust.vim'
+let g:rustfmt_autosave = 1
 
 " Javascript
 Plugin 'ternjs/tern_for_vim'
@@ -50,11 +55,12 @@ Plugin 'othree/yajs.vim'
 " Html
 " htmlhint (npm install -g htmlhint)
 Plugin 'othree/html5.vim'
+Plugin 'digitaltoad/vim-pug'
 
 " Typescript
 Plugin 'leafgarland/typescript-vim'
 Plugin 'Shougo/vimproc.vim'
-"Plugin 'Quramy/tsuquyomi'
+Plugin 'Quramy/tsuquyomi'
 Plugin 'HerringtonDarkholme/yats.vim'
 
 " Python
@@ -63,13 +69,18 @@ Plugin 'HerringtonDarkholme/yats.vim'
 " Go
 Plugin 'fatih/vim-go'
 
+" C/C++
+Plugin 'rhysd/vim-clang-format'
+autocmd FileType c ClangFormatAutoEnable
+
+
 call vundle#end()            " required
 filetype plugin indent on    " required
 syntax enable
 
 " colorscheme
 set background=dark
-"colorscheme solarized
+colorscheme solarized
 
 " ctrlp
 "let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules|bower_components)$'
@@ -89,7 +100,7 @@ let g:ctrlp_working_path_mode = 0
 set noswapfile
 set number
 set ignorecase
-set so=20
+"set so=20
 set smartcase
 set expandtab
 set exrc
@@ -102,6 +113,7 @@ set laststatus=2
 "let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='solarized'
 let g:airline_powerline_fonts = 1
+let g:ale_echo_msg_format = '%linter% says %s'
 " powerline
 "set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
 
