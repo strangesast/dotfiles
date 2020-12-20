@@ -35,7 +35,7 @@ Plugin 'iamcco/markdown-preview.nvim'
 " Javascript / Typescript / C / Go / Python / Rust
 Plugin 'w0rp/ale'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'neoclide/coc.nvim'
+"Plugin 'neoclide/coc.nvim'
 
 " Java
 Plugin 'artur-shaik/vim-javacomplete2'
@@ -62,15 +62,18 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'Shougo/vimproc.vim'
 Plugin 'Quramy/tsuquyomi'
 Plugin 'HerringtonDarkholme/yats.vim'
+Plugin 'prettier/vim-prettier'
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
+let g:prettier#exec_cmd_async = 1
 
 " Python
 "Plugin 'davidhalter/jedi-vim' "youcompleteme uses jedi, so this is redundant
-
 " Go
 Plugin 'fatih/vim-go'
 
 " C/C++
-Plugin 'rhysd/vim-clang-format'
+Plugin 'rhysd/vim-clang-format' " package clang-format required
 autocmd FileType c ClangFormatAutoEnable
 
 
@@ -79,22 +82,22 @@ filetype plugin indent on    " required
 syntax enable
 
 " colorscheme
-set background=dark
-colorscheme solarized
+"set background=dark
+"colorscheme solarized
 
 " ctrlp
 "let g:ctrlp_custom_ignore = '\v[\/](\.git|node_modules|bower_components)$'
 let g:ctrlp_working_path_mode = 0
-"if executable('ag')
-"  " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
-"  set grepprg=ag\ --nogroup\ --nocolor
-"  " Use ag in CtrlP for listing files. Lightning fast, respects .gitignore
-"  " and .agignore. Ignores hidden files by default.
-"  let g:ctrlp_user_command = 'ag %s -l --nocolor -f -g ""'
-"else
-  "ctrl+p ignore files in .gitignore
-  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
-"endif
+if executable('ag')
+  " Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
+  set grepprg=ag\ --nogroup\ --nocolor
+  " Use ag in CtrlP for listing files. Lightning fast, respects .gitignore
+  " and .agignore. Ignores hidden files by default.
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -f -g ""'
+else
+ "ctrl+p ignore files in .gitignore
+ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . -co --exclude-standard', 'find %s -type f']
+endif
 
 " general
 set noswapfile
@@ -104,6 +107,7 @@ set ignorecase
 set smartcase
 set expandtab
 set exrc
+set secure
 set shiftwidth=2
 set tabstop=2
 
@@ -111,11 +115,23 @@ set tabstop=2
 set laststatus=2
 " vim-airline
 "let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='solarized'
+"let g:airline_theme='solarized'
 let g:airline_powerline_fonts = 1
-let g:ale_echo_msg_format = '%linter% says %s'
+
 " powerline
 "set rtp+=/usr/local/lib/python2.7/dist-packages/powerline/bindings/vim/
+
+" ALE
+let g:ale_echo_msg_format = '%linter% says %s'
+let g:ale_c_parse_compile_commands=1
+"let g:ale_c_build_dir='build'
+let g:ale_c_build_dir = "./build"
+"    \    '*': ['remove_trailing_lines', 'trim_whitespace'],
+let g:ale_fixers = {
+    \    'javascript': ['eslint', 'prettier'],
+    \    'python': ['black']
+    \}
+let g:ale_fix_on_save = 1
 
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
@@ -124,7 +140,8 @@ map <C-n> :NERDTreeToggle<CR>
 autocmd Filetype go setlocal expandtab!
 
 " java
-autocmd FileType java setlocal omnifunc=javacomplete#Complete ts=2 sts=2 sw=2
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+"ts=2 sts=2 sw=2
 let g:JavaComplete_ImportDefault = -1
 let g:JavaComplete_ImportOrder = ['java.', 'javax.', 'com.', 'org.', 'net.']
 let g:JavaComplete_ImportSortType = 'packageName'
