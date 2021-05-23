@@ -35,7 +35,9 @@ Plugin 'iamcco/markdown-preview.nvim'
 " Javascript / Typescript / C / Go / Python / Rust
 Plugin 'w0rp/ale'
 Plugin 'Valloric/YouCompleteMe'
-"Plugin 'neoclide/coc.nvim'
+Plugin 'neoclide/coc.nvim'
+Plugin 'evanleck/vim-svelte'
+Plugin 'leafOfTree/vim-svelte-plugin'
 
 " Java
 Plugin 'artur-shaik/vim-javacomplete2'
@@ -132,6 +134,10 @@ let g:ale_fixers = {
     \    'python': ['black']
     \}
 let g:ale_fix_on_save = 1
+
+" svelte
+let g:vim_svelte_plugin_load_full_syntax = 1
+
 
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
