@@ -48,7 +48,7 @@ Plugin 'rust-lang/rust.vim'
 let g:rustfmt_autosave = 1
 
 " Javascript
-Plugin 'ternjs/tern_for_vim'
+"Plugin 'ternjs/tern_for_vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'othree/yajs.vim'
 
@@ -75,6 +75,12 @@ Plugin 'fatih/vim-go'
 " C/C++
 Plugin 'rhysd/vim-clang-format' " package clang-format required
 autocmd FileType c ClangFormatAutoEnable
+
+" Terraform
+Plugin 'hashivim/vim-terraform'
+
+" Svelte
+Plugin 'evanleck/vim-svelte'
 
 
 call vundle#end()            " required
@@ -110,6 +116,9 @@ set exrc
 set secure
 set shiftwidth=2
 set tabstop=2
+" highlight trailing whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
 
 " statusbar
 set laststatus=2
